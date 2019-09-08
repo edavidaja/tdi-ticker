@@ -14,6 +14,7 @@ df = pd.read_csv(
 df["Date"] = pd.to_datetime(df.Date, infer_datetime_format=True)
 
 app = dash.Dash("ticker")
+server = app.server
 
 app.layout = html.Div(
     [
